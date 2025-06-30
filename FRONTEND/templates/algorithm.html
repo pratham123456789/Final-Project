@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+
+{% block navbar %}
+    <nav id="navbar" class="navbar nav-menu">
+        <ul>
+            <li><a href="{{url_for('home')}}" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Home</span></a></li>
+            <li><a href="{{url_for('view_data')}}" class="nav-link scrollto"><i class="bx bx-server"></i><span>Predict Using Machine Learning</span></a></li>
+            <li><a href="{{url_for('algorithm')}}" class="nav-link scrollto active"><i class="bx bx-file-blank"></i> <span>Algorithm</span></a></li>
+            <li><a href="{{url_for('prediction')}}" class="nav-link scrollto"><i class="bx bx-bar-chart"></i> <span>Predict Using Deep Learning</span></a></li>
+            <li><a href="{{url_for('graph')}}" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Graph</span></a></li>
+            <li><a href="{{url_for('index')}}" class="nav-link scrollto"><i class="bx bx-log-out"></i> <span>LogOut</span></a></li>
+
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block content %}
+
+    <section id="testimonials" class="testimonials section-bg">
+        <br><br><br>
+        <center>
+            {% if accuracy %}
+            <h4 style="color: green;"><br>{{accuracy}}</h4>
+        {% endif %}
+
+            <div class="section-title">
+                <h2>Select Algorithm</h2>
+            </div>
+
+            <form action="{{url_for('algorithm')}}" method="post">
+                <div class="col-6">
+                <center>
+                    <select class="form-select" name="algorithm" required>
+                        <option hidden>Select Algorithm</option>
+                        <option value="Decision">Decision Tree Classifier</option>
+                        <option value="Random">Random Forest Classifier</option>
+                        <option value="SVM">Support Vector Machine</option>
+                        <option value="CNN">CNN</option>
+                        <option value="MobileNet">MobileNet</option>
+                        <option value="VGG16">VGG16</option>
+                        <option value="VGG19">VGG19</option>
+                        <option value="XGB">Xtreme Gradient Boost</option>
+                    
+                    </select>
+                </center>
+                </div><br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </center>
+        
+    </section>
+    
+{% endblock %}

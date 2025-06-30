@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block navbar %}
+    <nav id="navbar" class="navbar nav-menu">
+    <ul>
+        <li><a href="{{url_for('index')}}" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="{{url_for('about')}}" class="nav-link scrollto active"><i class="bx bx-user"></i> <span>About</span></a></li>
+        <li><a href="{{url_for('register')}}" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Register</span></a></li>
+        <li><a href="{{url_for('login')}}" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>LogIn</span></a></li>
+    </ul>
+    </nav>
+{% endblock %}
+
+{% block content %}
+<section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>About</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="/static/img/about.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 content">
+          <p>
+            The primary objective of this research is to evaluate the performance of classical machine learning algorithms—Support Vector Machines (SVM) and Decision Trees—in detecting plant diseases from image data. By analyzing their accuracy and effectiveness, the study aims to identify strengths and limitations in these methods for plant disease classification.
+            Additionally, the research seeks to explore the effectiveness of advanced ensemble learning algorithms, such as Random Forest (RF) and Extreme Gradient Boosting (XGBoost), in enhancing classification accuracy. These techniques will be evaluated for their ability to improve model robustness and handle the complexity of high-dimensional image data. Furthermore, the study aims to assess the impact of Bagging and Boosting methods on reducing variance and bias, respectively, to achieve more stable and accurate predictions.
+
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'index.html' %}
+
+{% block navbar %}
+    <nav id="navbar" class="navbar nav-menu">
+        <ul>
+            <li><a href="{{url_for('home')}}" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Home</span></a></li>
+            <li><a href="{{url_for('view_data')}}" class="nav-link scrollto"><i class="bx bx-server"></i><span>Predict Using Machine Learning</span></a></li>
+            <li><a href="{{url_for('algorithm')}}" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Algorithm</span></a></li>
+            <li><a href="{{url_for('prediction')}}" class="nav-link scrollto active"><i class="bx bx-bar-chart"></i> <span>Predict Using Deep Learning</span></a></li>
+            <li><a href="{{url_for('graph')}}" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Graph</span></a></li>
+            <li><a href="{{url_for('index')}}" class="nav-link scrollto"><i class="bx bx-log-out"></i> <span>LogOut</span></a></li>
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <section id="contact" class="contact">
+        <center>
+
+        <div style="width: 800px; text-align: justify;">
+
+            {% if prediction %}
+            <h2 style="color: green;">Predicted: {{prediction}}</h2><br>
+            <p><strong>Causes:</strong> {{ causes }}</p>
+            <p><strong>Remedies:</strong> {{ remedies }}</p>
+            <p><strong>Organic Treatment:</strong> {{ organic }}</p>
+            <p><strong>Inorganic Treatment:</strong> {{ inorganic }}</p>
+            <img src="{{ file_path }}" alt="Uploaded Image">
+        {% endif %}
+        </div><br><br>
+        
+
+        <div class="section-title">
+            <h2>Prediction</h2>
+        </div>
+        
+        <div class="col-8">
+            <form action="{{url_for('prediction')}}" method="post" enctype="multipart/form-data" role="form" class="info">
+            
+            <!-- Image Upload Field -->
+            <div class="form-group mt-3">
+                <input type="file" class="form-control" name="image" accept="image/*" required>
+            </div><br>
+
+            <div class="text-center"><button style="height: 50px; width: 300px;" type="submit" class="btn btn-primary">Submit</button></div>
+            </form>
+        </div>
+        </center>
+    </section>
+        
+{% endblock %}

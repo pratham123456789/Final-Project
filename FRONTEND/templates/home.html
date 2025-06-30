@@ -1,0 +1,103 @@
+{% extends 'index.html' %}
+
+{% block navbar %}
+    <nav id="navbar" class="navbar nav-menu">
+        <ul>
+            <li><a href="{{url_for('home')}}" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+            <li><a href="{{url_for('view_data')}}" class="nav-link scrollto"><i class="bx bx-server"></i><span>Prediction Using ML</span></a></li>
+            <li><a href="{{url_for('algorithm')}}" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Algorithm</span></a></li>
+            <li><a href="{{url_for('prediction')}}" class="nav-link scrollto"><i class="bx bx-bar-chart"></i> <span>Prediction Using DL</span></a></li>
+            <li><a href="{{url_for('graph')}}" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Graph</span></a></li>
+            <li><a href="{{url_for('index')}}" class="nav-link scrollto"><i class="bx bx-log-out"></i> <span>LogOut</span></a></li>
+
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <section id="testimonials" class="testimonials section-bg">
+        <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h4>AI Project On</h4>
+            <h2>Image Based Plant Disease Detection A Comparison Of Deep Learning And Classical Machine Learning</h2>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="testimonial-item">
+                <img src="/static/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Overview of Project</h3>
+                <h4>
+                    Plant disease detection has been a critical area of research due to its significant impact on agricultural productivity and food security. Traditionally, visual inspection by experts was the primary method for identifying plant diseases. However, this approach is time-consuming, subjective, and not scalable for large-scale farming. With advancements in technology, computational approaches have emerged, offering more efficient and accurate solutions. Modern methods leverage image processing and machine learning techniques to automate the detection process, significantly enhancing the speed and reliability of disease identification.</h4>
+                <!-- <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    "Empowering Insights, Building Trust: Harnessing Data's Potential for a Brighter Tomorrow, One Byte at a Time. #DataDrivenDecisions"
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p> -->
+                </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+                <div class="testimonial-item">
+                <img src="/static/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Statement of the Problem</h3>
+                <h4>The efficient management of plant health is a critical issue in modern agriculture, as plant diseases can significantly diminish crop yields and quality. Traditional methods for disease identification, which often rely on manual inspection by agricultural experts, are not only labor-intensive but also susceptible to inconsistencies and errors. As a result, there is a pressing need for automated solutions that can accurately and swiftly diagnose plant diseases to mitigate these challenges.
+                    </h4>
+                <!-- <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p> -->
+                </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+                <div class="testimonial-item">
+                <img src="/static/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Dataset Description</h3>
+                <h4>The PlantVillage dataset, available on Kaggle, comprises color images of various plant species affected by different diseases. This dataset is widely used for research in plant disease detection due to its comprehensive collection of images, which include both healthy and diseased plant leaves. The dataset contains images for different types of plants such as apple, grape, peach, and more, each with corresponding disease categories.</h4>
+                <!-- <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p> -->
+                </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+                <div class="testimonial-item">
+                <img src="/static/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Model Building</h3>
+                <h4>Implementing Both Classical Machine learning algorithm and Deep Learning Algorithm to detect the plant leaf disease.
+                    </h4>
+                <!-- <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    "Empowering Trust: Evaluating with Precision, Ensuring Accuracy, and Safeguarding Online Communities with Every Profile Assessment."
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p> -->
+                </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+                <div class="testimonial-item">
+                <img src="/static/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>Evaluating Models</h3>
+                <h4>After Implementing the algorithms Comparing the accuracy and using the best model for prediction of plant leaf disease</h4>
+                <!-- <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    "Empower Users, Combat Fakes: Report Suspicious Profiles, Safeguard Your Community. Together, We Keep Social Media Authentic!"
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p> -->
+                </div>
+            </div><!-- End testimonial item -->
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'index.html' %}
+
+{% block navbar %}
+    <nav id="navbar" class="navbar nav-menu">
+        <ul>
+            <li><a href="{{url_for('home')}}" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Home</span></a></li>
+            <li><a href="{{url_for('view_data')}}" class="nav-link scrollto"><i class="bx bx-server"></i><span>Predict Using Machine Learning</span></a></li>
+            <li><a href="{{url_for('algorithm')}}" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Algorithm</span></a></li>
+            <li><a href="{{url_for('prediction')}}" class="nav-link scrollto"><i class="bx bx-bar-chart"></i> <span>Predict Using Deep Learning</span></a></li>
+            <li><a href="{{url_for('graph')}}" class="nav-link scrollto active"><i class="bx bx-book-content"></i> <span>Graph</span></a></li>
+            <li><a href="{{url_for('index')}}" class="nav-link scrollto"><i class="bx bx-log-out"></i> <span>LogOut</span></a></li>
+
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <section id="contact" class="contact">
+        <center>
+            <div class="section-title">
+                <h2>Graphs</h2>
+            </div><br><br>
+
+            <div class="col-lg-8">
+                <img src="/static/graphs/MobileNet.png" height="500px" width="900px" alt="">
+            </div><br><br><br><br><br>
+
+            <div class="col-lg-8">
+                <img src="/static/graphs/VGG16.png" height="500px" width="900px" alt="">
+            </div><br><br><br><br><br>
+
+            <div class="col-lg-8">
+                <img src="/static/graphs/vgg19.png" height="500px" width="900px" alt="">
+            </div><br><br><br><br><br>
+
+            <div class="col-lg-8">
+                <img src="/static/graphs/cnn.png" height="500px" width="900px" alt="">
+            </div><br><br><br><br><br>
+
+            <div class="col-lg-8">
+                <img src="/static/graphs/DL comparision.png" height="500px" width="900px" alt="">
+            </div><br><br><br><br><br>
+
+            <div class="col-lg-8">
+                <img src="/static/graphs/ML comparision.png" height="500px" width="900px" alt="">
+            </div><br><br><br><br><br>
+
+
+        </center>
+    </section>
+{% endblock %}
