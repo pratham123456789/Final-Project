@@ -373,8 +373,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Author:** Pratham Sindhu  
 **Institution:** Chandigarh University  
-**Email:** [Your Email]  
-**LinkedIn:** [Your LinkedIn Profile]  
+**Email:** prathamsindhuroyaljaat890@gmail.com  
 **GitHub:** [@pratham123456789](https://github.com/pratham123456789)
 
 ---
